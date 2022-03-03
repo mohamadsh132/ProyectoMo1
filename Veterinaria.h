@@ -8,7 +8,7 @@
 #include "Propietario.h"
 
 using std::string;
-using std::multimap;
+using std::multimap; //tengo  que hacer un mapa no ordenado
 
 using std::vector;
 
