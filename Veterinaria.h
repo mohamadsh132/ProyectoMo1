@@ -2,22 +2,21 @@
 #define VETERINARIA_H
 
 #include <iostream>
-#include <map>
+#include <unordered_map>
 #include <vector>
 #include "Mascota.h"
 #include "Propietario.h"
 
 using std::string;
-using std::multimap; //tengo  que hacer un mapa no ordenado
+using std::unordered_map; //tengo  que hacer un mapa no ordenado
 
 using std::vector;
 
 class Veterinaria
 {
 private:
-    multimap <Propietario,Mascota> contactos;   
-    vector <Propietario> propietarios;       
-    vector <Mascota> mascotas;       
+    unordered_map <int,Propietario> propietarios;       
+    unordered_map <int,Mascota> mascotas;   
         
 public:
     void inicializarDatos();// TODO     

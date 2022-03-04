@@ -2,19 +2,30 @@
 #define PROPIETARIO_H
 
 #include <iostream>
+#include <vector>
 
 using std::string;
+using std::vector;
+
 
 class Propietario
 {
 private:
-    int documentoIdentidad;
+    double documentoIdentidad;
     string telefono;
     string nombre;
     string email;
+    vector <int> mascotas;
 
 public:
-    void modificarDatos(); // TODO
+    void setDocumentoId(double cedula); // TODO
+    void setTelefono(string telefono);
+    void setNombre(string nombre);
+    void setEmail(string email);
+    double getDocumentoId();
+    string getTelefono();
+    string getNombre();
+    string getEmail();
 
 };
 
