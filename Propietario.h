@@ -26,6 +26,7 @@ public:
     string getTelefono();
     string getNombre();
     string getEmail();
+    void addMascota(int idMascota);
 
 };
 

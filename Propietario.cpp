@@ -51,3 +51,7 @@ string Propietario::getNombre(){
 string Propietario::getTelefono(){
     return this->telefono;
 }
+
+void Propietario::addMascota(int idPropietario){
+  this->mascotas.push_back(idPropietario);
+}

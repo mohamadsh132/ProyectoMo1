@@ -15,9 +15,7 @@ private:
     string status;
     string fechaDefuncion;
     string tipoSangre;
-    string telefono;
     string nombre;
-    string email;
     string raza;
     string tipo;
     float peso;
@@ -30,9 +28,7 @@ public:
     void setStatus(string status);
     void setFechaDefuncion(string fechaDefuncion);
     void setTipoSangre(string tipoSangre);
-    void setTelefono(string telefono);
     void setNombre(string nombre);
-    void setEmail(string email);
     void setRaza(string raza);
     void setTipo(string tipo);
     void setPeso(float peso);
@@ -42,12 +38,12 @@ public:
     string getStatus();
     string getFechaDefuncion();
     string getTipoSangre();
-    string getTelefono();
     string getNombre();
-    string getEmail();
     string getRaza();
     string getTipo();
     float getPeso();
+
+    void addPropietario(int idPropietario);
 
 };
 

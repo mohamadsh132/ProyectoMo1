@@ -20,20 +20,12 @@ string Mascota::getTipoSangre(){
   return this->tipoSangre;
 }
 
-string Mascota::getTelefono() {
-  return this->telefono;
-}
-
 string Mascota::getRaza() {
   return this->raza;
 }
 
 string Mascota::getNombre() {
   return this->nombre;
-}
-
-string Mascota::getEmail() {
-  return this->email;
 }
 
 string Mascota::getTipo() {
@@ -69,22 +61,9 @@ void Mascota::setTipoSangre(string tipoSangre){
   this->tipoSangre = tipoSangre;
 }
 
-
-
-void Mascota::setTelefono(string telefono){
-  this->telefono = telefono;
-}
-
-
 void Mascota::setNombre(string nombre){
   this->nombre = nombre;
 }
-
-
-void Mascota::setEmail(string email){
-  this->email = email;
-}
-
 
 void Mascota::setRaza(string raza){
   this->raza = raza;
@@ -99,4 +78,8 @@ void Mascota::setTipo(string tipo){
 
 void Mascota::setPeso(float peso){
   this->peso = peso;
+}
+
+void Mascota::addPropietario(int idMascota){
+  this->propietarios.push_back(idMascota);
 }

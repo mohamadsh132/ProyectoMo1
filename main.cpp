@@ -1,11 +1,12 @@
 #include <iostream>
+#include "Veterinaria.h"
 
 
 using std::cin;
 using std::cout;
 using std::string;
 
-void menu()
+void menu(Veterinaria veterinaria)
 {
     int opc = 0;
     do
@@ -29,10 +30,42 @@ void menu()
 
         switch (opc)
         {
-        case 1:                    
+        case 1:                
             break;
         
         case 2:            
+            break;
+
+        case 3:
+            break;
+        
+        case 4:
+            break;
+        
+        case 5:
+            veterinaria.listarContactos();
+            break;
+        
+        case 6:
+            break;
+        
+        case 7:
+            veterinaria.listarMascotas();
+            break;
+        
+        case 8:
+            break;
+        
+        case 9:
+            break;
+        
+        case 10:
+            break;
+        
+        case 11:
+            break;
+        
+        case 12:
             break;
 
 
@@ -45,6 +78,10 @@ void menu()
 
 int main()
 {
-    menu();
+
+    Veterinaria veterinaria;
+    veterinaria.inicializarDatos();
+    menu(veterinaria);
+
     return 0;
 }

@@ -19,10 +19,10 @@ private:
     unordered_map <int,Mascota> mascotas;   
         
 public:
-    void inicializarDatos();// TODO     
+    void inicializarDatos();
     void agregarPropietario();
     void modificarPropietario(int cedula);
-    void eliminarPropietario(int cedula);
+    void eliminarMascota(int cedula);
     void listarContactoPropietario(int cedula);
     int contarPropietarios();
     void listarContactos();
@@ -33,8 +33,6 @@ public:
     void asociarPropietario(int idMascota);
     void cambiarEstadoMascotas(int idMascota);
     void eliminarPropietario(int idMascota);
-
-
 
 };
 
