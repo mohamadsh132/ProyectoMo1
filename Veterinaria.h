@@ -15,24 +15,25 @@ using std::vector;
 class Veterinaria
 {
 private:
-    unordered_map <int,Propietario> propietarios;       
-    unordered_map <int,Mascota> mascotas;   
+    unordered_map <double,Propietario> propietarios;       
+    unordered_map <double,Mascota> mascotas;   
         
 public:
     void inicializarDatos();
     void agregarPropietario();
-    void modificarPropietario(int cedula);
-    void eliminarMascota(int cedula);
-    void listarContactoPropietario(int cedula);
+    void agregarMascota();
+    void modificarPropietario(float cedula);
+    void eliminarPropietario(float cedula);
+    void listarContactoPropietario(float cedula);
     int contarPropietarios();
     void listarContactos();
     void listarMascotas();
-    void consultarMascotas(int cedula);
-    void consultarPropietario(int idMascota);
-    void asociarMascota(int cedula);
-    void asociarPropietario(int idMascota);
-    void cambiarEstadoMascotas(int idMascota);
-    void eliminarPropietario(int idMascota);
+    void consultarMascotas(float cedula);
+    void consultarPropietarios(float idMascota);
+    void asociarMascota(float cedula);
+    void asociarPropietario(float idMascota);
+    void cambiarEstadoMascotas(float idMascota);
+    void desasociarPropietario(float idMascota);//TODO
 
 };
 

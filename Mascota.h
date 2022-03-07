@@ -44,7 +44,11 @@ public:
     float getPeso();
 
     void addPropietario(int idPropietario);
-
+    int getNumeroPropietarios();
+    int getPropietarioId(int posicion);
+    bool searchPropietario(int cedula);
+    void eliminarPropietario(int cedula);
+    void imprimir();
 };
 
 #endif

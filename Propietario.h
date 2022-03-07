@@ -26,7 +26,12 @@ public:
     string getTelefono();
     string getNombre();
     string getEmail();
+  
+    int getNumeroMascotas();
+    int getMascotaId(int posicion);
     void addMascota(int idMascota);
+    bool searchMascota(int id);
+    void eliminarMascota(int id);
 
 };
 

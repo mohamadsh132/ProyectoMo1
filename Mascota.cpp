@@ -83,3 +83,34 @@ void Mascota::setPeso(float peso){
 void Mascota::addPropietario(int idMascota){
   this->propietarios.push_back(idMascota);
 }
+
+int Mascota::getNumeroPropietarios(){
+    return this->propietarios.size();
+}
+
+int Mascota::getPropietarioId(int posicion){
+    return this->propietarios[posicion];
+}
+
+// Busca a un propietario dada su cédula 
+bool Mascota::searchPropietario(int cedula){
+
+    for (int i = 0; i < this->propietarios.size(); i++){
+        if (this->propietarios[i] == cedula){
+          return true;
+        }
+    }
+    return false;
+}
+
+//Busca y elimina a un propietario de una mascota dada su cédula
+void Mascota::eliminarPropietario(int cedula){
+  for (int i = 0; i < this->propietarios.size(); i++){
+        if (this->propietarios[i] == cedula){          
+          this->propietarios.erase(this->propietarios.begin()+i);
+          i--;
+          
+        }
+  }
+
+}
