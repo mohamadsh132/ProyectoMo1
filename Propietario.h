@@ -15,7 +15,7 @@ private:
     string telefono;
     string nombre;
     string email;
-    vector <int> mascotas;
+    vector <double> mascotas;
 
 public:
     void setDocumentoId(double cedula); // TODO
@@ -28,10 +28,10 @@ public:
     string getEmail();
   
     int getNumeroMascotas();
-    int getMascotaId(int posicion);
-    void addMascota(int idMascota);
-    bool searchMascota(int id);
-    void eliminarMascota(int id);
+    double getMascotaId(int posicion);
+    void addMascota(double idMascota);
+    bool searchMascota(double id);
+    void eliminarMascota(double id);
 
 };
 

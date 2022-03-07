@@ -4,22 +4,6 @@
 using std::string;
 using namespace std;
 
-// void Propietario::modificarDatos(){
-//     string nuevoTelefono;
-//     string nuevoNombre;
-//     string nuevoEmail;
-//     cout << "Cambiando datos de propietario. \n";
-//     cout << "El nuevo telefono del propietario es: ";
-//     cin >> nuevoTelefono;
-//     this->telefono = nuevoTelefono;
-//     cout << "El nuevo nombre del propietario es: ";
-//     cin >> nuevoNombre;
-//     this->nombre = nuevoNombre;
-//     cout << "El nuevo correo del propietario es: ";
-//     cin >> nuevoEmail;
-//     this->email = nuevoEmail;
-// }
-
 void Propietario::setDocumentoId(double documentoIdentidad){
     this->documentoIdentidad = documentoIdentidad;
 }
@@ -52,7 +36,7 @@ string Propietario::getTelefono(){
     return this->telefono;
 }
 
-void Propietario::addMascota(int idPropietario){
+void Propietario::addMascota(double idPropietario){
   this->mascotas.push_back(idPropietario);
 }
 
@@ -60,12 +44,12 @@ int Propietario::getNumeroMascotas(){
     return this->mascotas.size();
 }
 
-int Propietario::getMascotaId(int posicion){
+double Propietario::getMascotaId(int posicion){
     return this->mascotas[posicion];
 }
 
 // Busca a una mascota dada su identificación
-bool Propietario::searchMascota(int id){
+bool Propietario::searchMascota(double id){
 
     for (int i = 0; i < this->mascotas.size(); i++){
         if (this->mascotas[i] == id){
@@ -76,7 +60,7 @@ bool Propietario::searchMascota(int id){
 }
 
 //Busca y elimina a una mascota de un propietario dada su id
-void Propietario::eliminarMascota(int id){
+void Propietario::eliminarMascota(double id){
   for (int i = 0; i < this->mascotas.size(); i++){
         if (this->mascotas[i] == id){          
           this->mascotas.erase(this->mascotas.begin()+i);

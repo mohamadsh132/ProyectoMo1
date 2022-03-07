@@ -87,7 +87,8 @@ void Veterinaria::inicializarDatos(){
 void Veterinaria::agregarMascota(){
     int edad;
     Mascota mascota;
-    float idMascota, peso;
+    double idMascota;
+    float peso;
     string status, fechaDefuncion, tipoSangre, nombre, raza, tipo;
     
     cout << "Ingrese el id de la mascota\n";
@@ -144,7 +145,7 @@ void Veterinaria::agregarMascota(){
 
 //Pide al usuario información para agregar un nuevo propietario
 void Veterinaria::agregarPropietario(){
-    float cedula;
+    double cedula;
     string email, nombre, telefono;
     Propietario propietario;
     
@@ -274,7 +275,7 @@ int Veterinaria::contarPropietarios(){
 }
 
 //Devuelve la información de un propietario dada su cédula
-void Veterinaria::listarContactoPropietario(float cedula){
+void Veterinaria::listarContactoPropietario(double cedula){
 
     if (Veterinaria::propietarios.count(cedula) == 0){
         cout << "La cedula ingresada no existe en el sistema.\n\n";
@@ -294,7 +295,7 @@ void Veterinaria::listarContactoPropietario(float cedula){
 }
 
 //Devuelve la información de las mascotas de un propietario dada su cédula
-void Veterinaria::consultarMascotas(float cedula){
+void Veterinaria::consultarMascotas(double cedula){
     
     if (Veterinaria::propietarios.count(cedula) == 0){
         cout << "La cedula ingresada no existe en el sistema.\n\n";
@@ -362,7 +363,7 @@ void Veterinaria::consultarMascotas(float cedula){
 }
 
 //Devuelve la información de los propietarios de una mascota dado su id
-void Veterinaria::consultarPropietarios(float id){
+void Veterinaria::consultarPropietarios(double id){
     
     if (Veterinaria::mascotas.count(id) == 0){
         cout << "El id ingresado no existe en el sistema.\n\n";
@@ -418,7 +419,7 @@ void Veterinaria::consultarPropietarios(float id){
 }
 
 //Cambia el estado de una mascota: de vivo a muerto
-void Veterinaria::cambiarEstadoMascotas(float id){
+void Veterinaria::cambiarEstadoMascotas(double id){
 
     if (Veterinaria::mascotas.count(id) == 0){
         cout << "El id ingresado no existe en el sistema.\n\n";
@@ -437,7 +438,7 @@ void Veterinaria::cambiarEstadoMascotas(float id){
 }
 
 //Actualiza el contacto de un propietario dada su cédula
-void Veterinaria::modificarPropietario(float cedula){
+void Veterinaria::modificarPropietario(double cedula){
 
     if (Veterinaria::propietarios.count(cedula) == 0){
         cout << "La cedula ingresada no existe en el sistema.\n\n";
@@ -466,14 +467,14 @@ void Veterinaria::modificarPropietario(float cedula){
 }
 
 //Elimina un propietario del sistema dada su cédula
-void Veterinaria::eliminarPropietario(float cedula){
+void Veterinaria::eliminarPropietario(double cedula){
     
     if (Veterinaria::propietarios.count(cedula) == 0){
         cout << "La cedula ingresada no existe en el sistema.\n\n";
         return;
     }    
 
-    float id;
+    double id;
     // Eliminar referencias del propietario para cada mascota si existen
     for (auto x : Veterinaria::mascotas){
         id = x.second.getDocumentoIdentidad();
@@ -487,14 +488,14 @@ void Veterinaria::eliminarPropietario(float cedula){
 }
 
 //Asocia una mascota a un propietario dada la cédula del propietario
-void Veterinaria::asociarMascota(float cedula){
+void Veterinaria::asociarMascota(double cedula){
 
     if (Veterinaria::propietarios.count(cedula) == 0){
         cout << "La cedula ingresada no existe en el sistema.\n\n";
         return;
     }    
 
-    float idMascota;
+    double idMascota;
 
     cout << "Ingrese el id de la mascota para asociar a "<<Veterinaria::propietarios[cedula].getNombre()<<"\n";
 
@@ -517,14 +518,14 @@ void Veterinaria::asociarMascota(float cedula){
 }
 
 //Asocia un propietario a una mascota dada la identificacion de la mascota
-void Veterinaria::asociarPropietario(float id){
+void Veterinaria::asociarPropietario(double id){
 
     if (Veterinaria::mascotas.count(id) == 0){
         cout << "La identificacion ingresada no existe en el sistema.\n\n";
         return;
     }  
 
-    float cedula;
+    double cedula;
 
     cout << "Ingrese la cedula del propietario para asociar a "<<Veterinaria::mascotas[id].getNombre()<<"\n";
 
@@ -551,14 +552,14 @@ void Veterinaria::asociarPropietario(float id){
 
 //Desasocia un propietario de una mascota dada la identificacion de la mascota
 
-void Veterinaria::desasociarPropietario(float idMascota){
+void Veterinaria::desasociarPropietario(double idMascota){
 
     if (Veterinaria::mascotas.count(idMascota) == 0){
         cout << "La identificacion ingresada no existe en el sistema.\n\n";
         return;
     }  
 
-    float cedula;
+    double cedula;
 
     cout << "Ingrese la cedula del propietario para desasociar de "<<Veterinaria::mascotas[idMascota].getNombre()<<"\n";
 

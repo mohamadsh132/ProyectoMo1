@@ -22,18 +22,18 @@ public:
     void inicializarDatos();
     void agregarPropietario();
     void agregarMascota();
-    void modificarPropietario(float cedula);
-    void eliminarPropietario(float cedula);
-    void listarContactoPropietario(float cedula);
+    void modificarPropietario(double cedula);
+    void eliminarPropietario(double cedula);
+    void listarContactoPropietario(double cedula);
     int contarPropietarios();
     void listarContactos();
     void listarMascotas();
-    void consultarMascotas(float cedula);
-    void consultarPropietarios(float idMascota);
-    void asociarMascota(float cedula);
-    void asociarPropietario(float idMascota);
-    void cambiarEstadoMascotas(float idMascota);
-    void desasociarPropietario(float idMascota);//TODO
+    void consultarMascotas(double cedula);
+    void consultarPropietarios(double idMascota);
+    void asociarMascota(double cedula);
+    void asociarPropietario(double idMascota);
+    void cambiarEstadoMascotas(double idMascota);
+    void desasociarPropietario(double idMascota);//TODO
 
 };
 

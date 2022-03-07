@@ -10,7 +10,7 @@ using std::string;
 class Mascota
 {
 private:
-    float documentoIdentidad;
+    double documentoIdentidad;
     int edad;
     string status;
     string fechaDefuncion;
@@ -19,7 +19,7 @@ private:
     string raza;
     string tipo;
     float peso;
-    vector <int> propietarios;    
+    vector <double> propietarios;    
     
 
 public:
@@ -43,12 +43,11 @@ public:
     string getTipo();
     float getPeso();
 
-    void addPropietario(int idPropietario);
+    void addPropietario(double idPropietario);
     int getNumeroPropietarios();
-    int getPropietarioId(int posicion);
-    bool searchPropietario(int cedula);
-    void eliminarPropietario(int cedula);
-    void imprimir();
+    double getPropietarioId(int posicion);
+    bool searchPropietario(double cedula);
+    void eliminarPropietario(double cedula);
 };
 
 #endif
