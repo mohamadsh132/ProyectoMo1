@@ -431,7 +431,7 @@ void Veterinaria::cambiarEstadoMascotas(double id){
     Veterinaria::mascotas[id].setStatus("Muerto");
     cout << "Ingrese la fecha de defunción: \n";
     cin >> fechaDefuncion;
-
+    Veterinaria::mascotas[id].setFechaDefuncion(fechaDefuncion);
     cout << Veterinaria::mascotas[id].getNombre() << " se ha actualizado correctamente.\n\n";
 
 
@@ -512,6 +512,7 @@ void Veterinaria::asociarMascota(double cedula){
     }
 
     Veterinaria::mascotas[idMascota].addPropietario(cedula);
+    Veterinaria::propietarios[cedula].addMascota(idMascota);
 
     cout << "Se ha añadido el nuevo propietario correctamente.\n\n";
 
@@ -542,6 +543,8 @@ void Veterinaria::asociarPropietario(double id){
     }
 
     Veterinaria::propietarios[cedula].addMascota(id);
+    Veterinaria::mascotas[id].addPropietario(cedula);
+
 
     cout << "Se ha añadido la nueva mascota correctamente.\n\n";
 
